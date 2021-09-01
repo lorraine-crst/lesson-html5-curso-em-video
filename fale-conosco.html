@@ -43,7 +43,7 @@ scr="_main.js/funcoes.js"></script>
           </hgroup>
         </header>
 
-<form>
+<form method="post" id="fContato" action="mailto:cristinalorraine424@gmail.com">
   <fieldset>
  <legend id="usuario">Identificação do Usuário</legend>
     <p>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
@@ -62,14 +62,25 @@ scr="_main.js/funcoes.js"></script>
     <legend id="endereco">Endereço do Usuário</legend>
     <p>Logradouro:<input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Avenida..."></p>
     <p>Número:<input type="number" name="tNum" id="cNum" min="1" max="99999" ></p>
-    Estado:
-    Cidade:
+    <p>Estado:<select name="cCid" id="cEst">
+      <option>Rio de Janeiro</option>
+      <option>São Paulo</option>
+      <option>Minas Gerais</option>
+      <option>Santa Catarina</option>
+    </select></p>
+    <p>Cidade:<input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua cidade" list="cidades"></p>
+    <datalist id="cidades">
+      <option>Nova Iguaçu </option>
+      <option> Holambra </option>
+      <option>Belo Horizonte</option>
+      <option> Florianópolis </option>
+    </datalist>
   </fieldset>
   
    <fieldset id="mensagem">
     <legend>Mensagem do Usuário</legend>
-    Grau de Urgência:
-    Mensagem:
+    <p>Grau de urgência:<br> Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Máx</p>
+    <p>Mensagem:<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"><br></p>
    </fieldset>
    
    <fieldset id="pedido">
